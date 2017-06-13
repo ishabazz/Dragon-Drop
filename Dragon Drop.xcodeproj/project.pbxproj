@@ -14,6 +14,8 @@
 		B48BC0831EF016CC00AF785C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B48BC0811EF016CC00AF785C /* LaunchScreen.storyboard */; };
 		B48BC08E1EF016CC00AF785C /* Dragon_DropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC08D1EF016CC00AF785C /* Dragon_DropTests.swift */; };
 		B48BC0991EF016CC00AF785C /* Dragon_DropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC0981EF016CC00AF785C /* Dragon_DropUITests.swift */; };
+		B48BC0A71EF0189A00AF785C /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC0A61EF0189A00AF785C /* MainTVC.swift */; };
+		B48BC0A91EF018AB00AF785C /* SimpleReorderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC0A81EF018AB00AF785C /* SimpleReorderTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		B48BC0941EF016CC00AF785C /* Dragon DropUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dragon DropUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48BC0981EF016CC00AF785C /* Dragon_DropUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_DropUITests.swift; sourceTree = "<group>"; };
 		B48BC09A1EF016CC00AF785C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B48BC0A61EF0189A00AF785C /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
+		B48BC0A81EF018AB00AF785C /* SimpleReorderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleReorderTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				B48BC0781EF016CC00AF785C /* AppDelegate.swift */,
 				B48BC07A1EF016CC00AF785C /* ViewController.swift */,
 				B48BC07C1EF016CC00AF785C /* Main.storyboard */,
+				B48BC0A61EF0189A00AF785C /* MainTVC.swift */,
+				B48BC0A81EF018AB00AF785C /* SimpleReorderTVC.swift */,
 				B48BC07F1EF016CC00AF785C /* Assets.xcassets */,
 				B48BC0811EF016CC00AF785C /* LaunchScreen.storyboard */,
 				B48BC0841EF016CC00AF785C /* Info.plist */,
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B48BC07B1EF016CC00AF785C /* ViewController.swift in Sources */,
+				B48BC0A71EF0189A00AF785C /* MainTVC.swift in Sources */,
 				B48BC0791EF016CC00AF785C /* AppDelegate.swift in Sources */,
+				B48BC0A91EF018AB00AF785C /* SimpleReorderTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
