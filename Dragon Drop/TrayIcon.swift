@@ -17,6 +17,7 @@ class TrayIcon:NSObject,NSCoding{
         aCoder.encode(title, forKey: "title")
         aCoder.encode(image, forKey: "image")
         aCoder.encode(type.rawValue, forKey:"type")
+        aCoder.encode(tapeStyle.rawValue, forKey:"tapeStyle")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,6 +30,14 @@ class TrayIcon:NSObject,NSCoding{
         else{
             self.type = .unknown
         }
+        
+        if let rawType = aDecoder.decodeObject(forKey:"tapeStyle") as? String{
+            
+            self.tapeStyle = TapeType(rawValue: rawType) ?? .unknown
+        }
+        else{
+            self.tapeStyle = .unknown
+        }
     }
     
     
@@ -38,17 +47,20 @@ class TrayIcon:NSObject,NSCoding{
     var image:UIImage?
     var title:NSString?
     var type:ModuleType
+    var tapeStyle:TapeType
     
     init(image:UIImage?, name:NSString, type:ModuleType) {
         self.image = image ?? UIImage()
         self.title = name
         self.type = type
+        self.tapeStyle = .unknown
         super.init()
         
     }
     
     required init(itemProviderData data: Data, typeIdentifier: String) throws {
         self.type = .unknown
+        self.tapeStyle = .unknown
         super.init()
         setTrayIcon(with: data)
     }
@@ -58,6 +70,8 @@ class TrayIcon:NSObject,NSCoding{
         self.image = obj.image
         self.title = obj.title
         self.type = obj.type
+        self.tapeStyle = obj.tapeStyle
+            
         }
     }
 }
