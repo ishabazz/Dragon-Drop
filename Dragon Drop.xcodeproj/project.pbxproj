@@ -15,6 +15,9 @@
 		B48BC08E1EF016CC00AF785C /* Dragon_DropTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC08D1EF016CC00AF785C /* Dragon_DropTests.swift */; };
 		B48BC0991EF016CC00AF785C /* Dragon_DropUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC0981EF016CC00AF785C /* Dragon_DropUITests.swift */; };
 		B48BC0A91EF018AB00AF785C /* SimpleReorderTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BC0A81EF018AB00AF785C /* SimpleReorderTVC.swift */; };
+		C82D1D5E1EF0BD5200A17B83 /* DragAndDropCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D1D5D1EF0BD5200A17B83 /* DragAndDropCell.swift */; };
+		C82D1D601EF0BD7000A17B83 /* DragAndDropCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82D1D5F1EF0BD7000A17B83 /* DragAndDropCVC.swift */; };
+		C82F579B1EF1A2770020A650 /* TrayIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82F579A1EF1A2770020A650 /* TrayIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		B48BC0981EF016CC00AF785C /* Dragon_DropUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_DropUITests.swift; sourceTree = "<group>"; };
 		B48BC09A1EF016CC00AF785C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B48BC0A81EF018AB00AF785C /* SimpleReorderTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleReorderTVC.swift; sourceTree = "<group>"; };
+		C82D1D5D1EF0BD5200A17B83 /* DragAndDropCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropCell.swift; sourceTree = "<group>"; };
+		C82D1D5F1EF0BD7000A17B83 /* DragAndDropCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropCVC.swift; sourceTree = "<group>"; };
+		C82F579A1EF1A2770020A650 /* TrayIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				B48BC07A1EF016CC00AF785C /* ViewController.swift */,
 				B48BC07C1EF016CC00AF785C /* Main.storyboard */,
 				B48BC0A81EF018AB00AF785C /* SimpleReorderTVC.swift */,
+				C82D1D5D1EF0BD5200A17B83 /* DragAndDropCell.swift */,
+				C82D1D5F1EF0BD7000A17B83 /* DragAndDropCVC.swift */,
+				C82F579A1EF1A2770020A650 /* TrayIcon.swift */,
 				B48BC07F1EF016CC00AF785C /* Assets.xcassets */,
 				B48BC0811EF016CC00AF785C /* LaunchScreen.storyboard */,
 				B48BC0841EF016CC00AF785C /* Info.plist */,
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82F579B1EF1A2770020A650 /* TrayIcon.swift in Sources */,
+				C82D1D601EF0BD7000A17B83 /* DragAndDropCVC.swift in Sources */,
 				B48BC07B1EF016CC00AF785C /* ViewController.swift in Sources */,
 				B48BC0791EF016CC00AF785C /* AppDelegate.swift in Sources */,
+				C82D1D5E1EF0BD5200A17B83 /* DragAndDropCell.swift in Sources */,
 				B48BC0A91EF018AB00AF785C /* SimpleReorderTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATZFQJSAHX;
 				INFOPLIST_FILE = "Dragon Drop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Dragon-Drop";
@@ -437,7 +449,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATZFQJSAHX;
 				INFOPLIST_FILE = "Dragon Drop/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Dragon-Drop";

@@ -14,11 +14,10 @@ extension SimpleReorderTVC:UITableViewDragDelegate{
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let item = self.data[indexPath.row]
         let itemProvider = NSItemProvider(object: NSString(string: item))
+       
         let dragItem = UIDragItem(itemProvider: itemProvider)
         return [dragItem]
     }
-    
-    
     
 }
 
@@ -40,18 +39,41 @@ extension SimpleReorderTVC:UITableViewDropDelegate{
         
         guard let item =  coordinator.session.localDragSession?.items.first else {return}
         
-        
-        for i in  coordinator.items{
+        for coordinatorItem in coordinator.items{
             
-            if let source =  i.sourceIndexPath {
-                let value = data[source.row]
-                data.remove(at: source.row)
-                data.insert(value, at: destinationIndexPath.row)
+            let itemProvder = coordinatorItem.dragItem.itemProvider
+            
+            if itemProvder.canLoadObject(ofClass: TrayIcon.self){
+                
+                
+                itemProvder.loadObject(ofClass: TrayIcon.self, completionHandler: { (object, error) in
+                    print (error?.localizedDescription)
+                    DispatchQueue.main.async {
+                        
+                        if let source =  coordinatorItem.sourceIndexPath {
+                            let value = self.data[source.row]
+                            self.data.remove(at: source.row)
+                            self.data.insert(value, at: destinationIndexPath.row)
+                        }
+                        else if let icon = object as? TrayIcon{
+                            if let title = icon.title{
+                            self.data.insert(title as String, at: destinationIndexPath.row)
+                            coordinator.drop(coordinatorItem.dragItem, toRowAt: destinationIndexPath)
+                                tableView.reloadSections(IndexSet(integer: 0),with:.automatic)
+                            }
+                        }
+                        
+                        coordinator.drop(item, toRowAt: destinationIndexPath)
+                        tableView.reloadData()
+                        
+                        
+                    }
+                })
             }
-            
         }
-        coordinator.drop(item, toRowAt: destinationIndexPath)
-        tableView.reloadData()
+        
+       
+        
   
     }
     
